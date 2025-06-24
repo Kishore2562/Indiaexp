@@ -1,0 +1,118 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #1b2735, #090a0f);
+  color: white;
+  margin: 0;
+  padding: 1rem;
+}
+body::before {
+  content: "";
+  background: url("https://github.com/Kishore2562/sampleweb/blob/main/world.jpg?raw=true") no-repeat center center;
+  background-size: 100%;
+  opacity: 0.25;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  animation: floatBg 30s linear infinite;
+}
+@keyframes floatBg {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+h1, h2 {
+  text-align: center;
+  color: #00eaff;
+}
+.state-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.state {
+  background: #222;
+  padding: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.state:hover {
+  background: #333;
+  transform: scale(1.05);
+}
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+.modal-content {
+  background: #111;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 90%;
+  animation: popIn 0.4s ease;
+  position: relative;
+}
+.close-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.tourist-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+.tourist-images div {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+.tourist-images img {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  background: #555;
+  object-fit: cover;
+  margin-bottom: 0.3rem;
+}
+@keyframes popIn {
+  from { transform: scale(0.7); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+.contact {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: #111;
+  border-radius: 10px;
+  max-width: 600px;
+  margin-inline: auto;
+}
+.contact input, .contact textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 5px;
+}
+.contact button {
+  padding: 0.7rem 1.5rem;
+  background: #28a745;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}

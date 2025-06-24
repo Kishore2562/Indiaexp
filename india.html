@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>India Explorer</title>
+  <link rel="stylesheet" href="india.css" />
+</head>
+<body>
+  <h1>🇮🇳 India Explorer</h1>
+  <h3>When did India get independence?</h3>
+  <input type="text" id="answer" placeholder="Enter year" />
+  <button onclick="startApp()">Start Exploring</button>
+
+  <div id="app" style="display:none;">
+    <h2>Explore States & Union Territories</h2>
+    <div class="state-list" id="stateList"></div>
+
+    <div class="contact">
+      <h2>Contact Us</h2>
+      <input type="text" placeholder="Your Name" />
+      <input type="email" placeholder="Your Email" />
+      <textarea placeholder="Your Message"></textarea>
+      <button>Send Message</button>
+    </div>
+  </div>
+
+  <div id="modal" class="modal" onclick="closeModal(event)">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal(event)">&times;</span>
+      <h3 id="modalTitle"></h3>
+      <p id="modalDate"></p>
+      <div class="tourist-images" id="modalImages"></div>
+    </div>
+  </div>
+
+  <script src="india.js"></script>
+</body>
+</html>
